@@ -32,9 +32,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.niyuktiuserapp.screens.DiscoverScreen
-import com.example.niyuktiuserapp.screens.SwipeableCard
 import com.example.niyuktiuserapp.ui.theme.NiyuktiUserAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,9 +54,9 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier
                             .padding(innerPadding)
                             .padding(top = 16.dp)
-                    ) { SwipeableCard({}, {}) {
+                    ) {
                         DiscoverScreen()
-                    } }
+                    }
                 }
             }
         }
