@@ -1,4 +1,4 @@
-package com.example.niyuktiuserapp
+package com.example.niyuktiuserapp.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -31,7 +31,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.niyuktiuserapp.screens.DiscoverScreen
+import com.example.niyuktiuserapp.view.screens.DiscoverScreen
 import com.example.niyuktiuserapp.ui.theme.NiyuktiUserAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 

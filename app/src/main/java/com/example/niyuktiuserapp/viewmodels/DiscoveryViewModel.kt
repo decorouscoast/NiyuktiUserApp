@@ -1,6 +1,7 @@
 package com.example.niyuktiuserapp.viewmodels
 
 import androidx.lifecycle.ViewModel
+import com.example.niyuktiuserapp.R
 import com.example.niyuktiuserapp.model.ApplicantDetailItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,7 +18,7 @@ class DiscoveryViewModel @Inject constructor(): ViewModel() {
         return listOf(
             ApplicantDetailItem(
                 name = "John Doe",
-                imageUrl = "https://via.placeholder.com/150",
+                imageUrl = R.drawable.images,
                 designation = "Software Engineer",
                 location = "New York, USA",
                 workPreference = "Full-time",
@@ -33,7 +34,7 @@ class DiscoveryViewModel @Inject constructor(): ViewModel() {
             ),
             ApplicantDetailItem(
                 name = "Jane Smith",
-                imageUrl = "https://via.placeholder.com/150",
+                imageUrl = R.drawable.image3,
                 designation = "Graphic Designer",
                 location = "San Francisco, USA",
                 workPreference = "Part-time",
@@ -49,7 +50,7 @@ class DiscoveryViewModel @Inject constructor(): ViewModel() {
             ),
             ApplicantDetailItem(
                 name = "Alice Johnson",
-                imageUrl = "https://via.placeholder.com/150",
+                imageUrl = R.drawable.image4,
                 designation = "Data Scientist",
                 location = "London, UK",
                 workPreference = "Remote",
@@ -65,7 +66,7 @@ class DiscoveryViewModel @Inject constructor(): ViewModel() {
             ),
             ApplicantDetailItem(
                 name = "Bob Brown",
-                imageUrl = "https://via.placeholder.com/150",
+                imageUrl = R.drawable.image2,
                 designation = "Product Manager",
                 location = "Sydney, Australia",
                 workPreference = "Full-time",
@@ -81,7 +82,7 @@ class DiscoveryViewModel @Inject constructor(): ViewModel() {
             ),
             ApplicantDetailItem(
                 name = "Charlie Davis",
-                imageUrl = "https://via.placeholder.com/150",
+                imageUrl = R.drawable.images,
                 designation = "Marketing Specialist",
                 location = "Toronto, Canada",
                 workPreference = "Part-time",

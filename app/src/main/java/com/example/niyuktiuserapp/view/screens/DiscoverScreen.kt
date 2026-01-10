@@ -1,4 +1,4 @@
-package com.example.niyuktiuserapp.screens
+package com.example.niyuktiuserapp.view.screens
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring
@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -31,7 +32,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
@@ -51,18 +52,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.niyuktiuserapp.R
 import com.example.niyuktiuserapp.model.ApplicantDetailItem
 import com.example.niyuktiuserapp.viewmodels.DiscoveryViewModel
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 @Preview
 @Composable
 fun DiscoverScreen() {
     val viewModel = hiltViewModel<DiscoveryViewModel>()
     val applicantList = viewModel.getDummyApplicantDetails()
-    var currentIndex by remember { mutableStateOf(0) }
+    var currentIndex by remember { mutableIntStateOf(0) }
     val scope = rememberCoroutineScope()
 
     val offsetX = remember { Animatable(0f) }
@@ -134,13 +133,12 @@ private fun ApplicantProfile(info: ApplicantDetailItem) {
                     modifier = Modifier
                         .fillMaxHeight(0.4f)
                 ) {
-                    val imageList = listOf(R.drawable.images, R.drawable.image2, R.drawable.image3, R.drawable.image4)
-                    val idx = Random.nextInt(0, imageList.size)
                     Image(
-                        painter = painterResource(imageList[idx]),
+                        painter = painterResource(info.imageUrl),
                         contentDescription = "Profile Image",
                         contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
+                        modifier = Modifier.fillMaxWidth()
+                            .height(300.dp)
                     )
                     Text(
                         text = info.name,

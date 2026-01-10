@@ -11,3 +11,4 @@ local.properties
 .galaxy
 common/build
 app/build
+.kotlin

@@ -2,7 +2,7 @@ package com.example.niyuktiuserapp.model
 
 data class ApplicantDetailItem(
     val name: String,
-    val imageUrl: String,
+    val imageUrl: Int,
     val designation: String,
     val location: String,
     val workPreference: String,
